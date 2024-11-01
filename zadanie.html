@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="javas.js" type="text/javascript"></script>
+        <title>PetShop</title>
+        <link href="style.css" rel="stylesheet">
+		<form name="myForm" target="_blank" action="https://formspree.io/f/xjvzawbz" method="POST">
+    </head>
+    <body>
+        <input type="hidden" value="daria" name="hidden_name">
+        <div class="zahlavie">
+		<h1>PetShop</h1>
+		</div>
+		<div class="box">
+		<div>
+		<div class="data">
+		<p>Personal data<p>
+		</div>
+			<div>
+		    <label for="meno">First Name: </label>
+            <input type="text" name="meno" id="meno" class="for_field" required>
+		    </div>
+		  <div>
+          <label for="priezvisko">Last Name: </label>
+          <input type="text" name="priezvisko" id="priezvisko" class="for_field" required>
+          </div>
+		    <div>
+		    <label for="datum">Date of birth:</label>
+	        <input type="text" name="datum"  autocomplete="off" id = "datum" placeholder="yyyy-mm-dd" class="for_field" onchange = "ageCalculator()" required>
+		    </div>
+			<div>
+			<label for="vek">Age:</label>
+            <div type="number" name="vek" id="vekPouzivatela" class="for_field" >
+            </div>
+			</div>
+		<div class ="age" id="age">
+		</div>
+		<div>
+		<label for="email">E-mail:</label>
+	    <input type="text" name="email"  autocomplete="on" id = "email" class="for_field" onchange = "mailFunc()" required>
+		</div>
+		<div id="div2"></div>
+	    <div>
+		<label for="phone">Phone number:</label>
+	    <input type="tel" name="phone"  autocomplete="off" id = "phone" placeholder="+421-123-456-789" class="for_field" onchange= "phoneFunc()"required>
+		<div id="div3"></div>
+		</div>
+        </div>
+       
+		
+		<div class="data">
+        <p>Animal</p>
+        </div>
+		<div>
+		<div>
+<form name="form1" id="form1" action="/action_page.php" >Type: <select name="type" id="subject" class="for_field" required>
+    <option value="" selected="selected"></option>
+  </select>
+  <br><br>Breed: <select name="breed" id="topic" class="for_field" required>
+    <option value="" selected="selected"></option>
+  </select>
+  <br><br>Color: <select name="color" id="chapter" class="for_field" required>
+    <option value="" selected="selected"></option>
+  </select>
+  </form>
+  </div>
+				
+
+<div>
+	<div>
+    <p>Male or feamle?</p>
+    </div>
+		<div>
+		<input type="radio" id="male" name="maleorfemale" value="MALE" class="label">
+		<label for="male" class="mf">Male</label><br>
+		<input type="radio" id="female" name="maleorfemale1" value="FEMALE" class="label">
+		<label for="female" class="mf">Female</label><br>
+		</div>
+		</div>
+		<div>
+		
+	<div>
+    <p>Anything else?</p>
+    </div>
+		<div>
+		<input type="radio" id="Yes" name="yesorno" value="YES" class="label" onclick="WriteBox();" >
+		<label for="YES" class="mf">Yes</label><br>
+		<input type="radio" id="No" name="yesorno" value="NO" class="label" onclick="WriteBox();" >
+		<label for="NO" class="mf">No</label><br>
+		</div>
+		
+	<div>
+    <textarea name="answer" id="box1" rows="1" style="display:none;" ></textarea>
+    </div>
+	</div>
+				    
+	<div class="button">
+    <button type="submit" id="bttn"> Send</button>
+    </div>
+	</div>
+
+</body>
+</html>
